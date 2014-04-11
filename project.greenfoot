@@ -1,0 +1,10 @@
+#Greenfoot properties
+#Fri Apr 11 10:33:36 PDT 2014
+version=2.5.0
+project.charset=UTF-8
+class.Leaf.image=leaf.gif
+class.Wombat.image=wombat.gif
+class.Wombat.superclass=greenfoot.Actor
+world.lastInstantiated=WombatWorld
+class.WombatWorld.superclass=greenfoot.World
+class.Leaf.superclass=greenfoot.Actor
