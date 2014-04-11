@@ -49,7 +49,7 @@ public class Monster extends Moveable
             return;
         }
         
-        move();
+        //move();
     }    
     
     public Monster()
