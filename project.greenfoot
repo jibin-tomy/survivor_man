@@ -1,5 +1,6 @@
 #Greenfoot properties
-#Fri Apr 11 11:51:53 PDT 2014
+#Fri Apr 11 12:46:15 PDT 2014
+class.ScoreKeeper.superclass=greenfoot.Actor
 class.Leaf.image=leaf.gif
 class.Wombat.image=wombat.gif
 class.Monster.superclass=Moveable
@@ -10,6 +11,6 @@ project.charset=UTF-8
 version=2.5.0
 world.lastInstantiated=HeroWorld
 class.Hero.superclass=Moveable
-class.Leaf.superclass=greenfoot.Actor
 class.WombatWorld.superclass=greenfoot.World
+class.Leaf.superclass=greenfoot.Actor
 class.Wall.superclass=greenfoot.Actor
