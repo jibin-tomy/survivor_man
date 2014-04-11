@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * @author Michael Kolling
  * @version 1.0.1
  */
-public class Hero extends Moveable
+public abstract class Moveable extends Actor
 {
     private static final int EAST = 0;
     private static final int WEST = 1;
@@ -18,30 +18,7 @@ public class Hero extends Moveable
     private static final int SOUTH = 3;
 
     private int direction;
-    private int leavesEaten;
-
-    public Hero()
-    {
-        setDirection(EAST);
-        leavesEaten = 0;
-    }
-
-    /**
-     * Do whatever the Hero likes to to just now.
-     */
-    public void act()
-    {
-        if(foundWall()) {
-            eatWall();
-        }
-        else if(canMove()) {
-            move();
-        }
-        else {
-            turnLeft();
-        }
-    }
-
+    
     /**
      * Check whether there is a Wall in the same cell as we are.
      */
@@ -53,19 +30,6 @@ public class Hero extends Moveable
         }
         else {
             return false;
-        }
-    }
-    
-    /**
-     * Eat a Wall.
-     */
-    public void eatWall()
-    {
-        Actor Wall = getOneObjectAtOffset(0, 0, Wall.class);
-        if(Wall != null) {
-            // eat the Wall...
-            getWorld().removeObject(Wall);
-            leavesEaten = leavesEaten + 1; 
         }
     }
     
@@ -187,13 +151,5 @@ public class Hero extends Moveable
             default :
                 break;
         }
-    }
-
-    /**
-     * Tell how many leaves we have eaten.
-     */
-    public int getLeavesEaten()
-    {
-        return leavesEaten;
     }
 }
