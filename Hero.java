@@ -52,5 +52,11 @@ public class Hero extends Moveable
         }
         
     }
+    
+    @Override
+    public void die()
+    {
+        //TODO
+    }
 }
     

@@ -57,4 +57,10 @@ public class Monster extends Moveable
         setDirection(Moveable.EAST);
         setImage("images/monster.png");
     }
+    
+    @Override
+    public void die()
+    {
+        getWorld().removeObject(this);
+    }
 }

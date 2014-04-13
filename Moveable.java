@@ -18,7 +18,22 @@ public abstract class Moveable extends Actor
     protected static final int SOUTH = 3;
 
     private int direction;
+    private int life;
     
+    public int getLife()
+    {
+        return life;
+    }
+    
+    public void setLife(int life)
+    {
+        this.life = life;
+        if (life <= 0)
+            die();
+    }
+    
+    public abstract void die();
+        
     /**
      * Check whether there is a Wall in the same cell as we are.
      */
