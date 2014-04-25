@@ -12,13 +12,28 @@ import java.util.ArrayList;
  */
 public abstract class Moveable extends Actor
 {
-    private static final int EAST = 0;
-    private static final int WEST = 1;
-    private static final int NORTH = 2;
-    private static final int SOUTH = 3;
+    protected static final int EAST = 0;
+    protected static final int WEST = 1;
+    protected static final int NORTH = 2;
+    protected static final int SOUTH = 3;
 
     private int direction;
+    private int life;
     
+    public int getLife()
+    {
+        return life;
+    }
+    
+    public void setLife(int life)
+    {
+        this.life = life;
+        if (life <= 0)
+            die();
+    }
+    
+    public abstract void die();
+        
     /**
      * Check whether there is a Wall in the same cell as we are.
      */
