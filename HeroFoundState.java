@@ -20,7 +20,8 @@ public class HeroFoundState extends AbstractMonsterState
         }
         else
         {
-            Hero hero = (Hero) monster.getWorld().getObjects(Hero.class).get(0);
+ 
+            Hero hero = Hero.getInstance();
             int heroX = hero.getX();
             int heroY = hero.getY();
             int myX = monster.getX();
@@ -53,6 +54,7 @@ public class HeroFoundState extends AbstractMonsterState
                 monster.move();
                 return;
             }
+
         }
     }
 }

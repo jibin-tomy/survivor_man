@@ -38,12 +38,16 @@ public class Monster extends Moveable
     
     public boolean onHero()
     {
-        Hero hero = (Hero) getWorld().getObjects(Hero.class).get(0);
-        int heroX = hero.getX();
-        int heroY = hero.getY();
-        int myX = getX();
-        int myY = getY();
-        return heroX == myX && heroY == myY; 
+        if (getWorld().getObjects(Hero.class).size() != 0)
+        {
+            Hero hero = (Hero) getWorld().getObjects(Hero.class).get(0);
+            int heroX = hero.getX();
+            int heroY = hero.getY();
+            int myX = getX();
+            int myY = getY();
+            return heroX == myX && heroY == myY; 
+        }
+        return false;
     }
     
     public void fight()
