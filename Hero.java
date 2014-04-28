@@ -12,10 +12,17 @@ import java.util.ArrayList;
  */
 public class Hero extends Moveable
 {
-    
-    public Hero()
+    private static Hero heroinstance;
+    private Hero()
     {
-        setDirection(Moveable.EAST);
+                setDirection(Moveable.EAST);
+    }
+
+    public static Hero getInstance()
+    {
+    if (heroinstance == null)
+        heroinstance = new Hero();
+    return heroinstance;
     }
 
     /**
@@ -50,13 +57,40 @@ public class Hero extends Moveable
         {
               move();      
         }
-        
+        if(isOn(Food.class))
+        {
+            acquire(Food.class);
+        }
     }
     
+    public boolean isOn(Class sm)
+    {
+        Actor actor = getOneIntersectingObject(sm);
+        return actor != null;
+    }
     @Override
     public void die()
     {
         //TODO
     }
+     public void acquire(Class sm)
+     {
+            Actor actor = getOneObjectAtOffset(0,0,sm);
+            if(actor != null)
+            {
+                   
+                    getWorld().removeObject(actor);
+            }
+             HeroWorld hw = (HeroWorld) getWorld();    
+                    ScoreKeeper score = hw.getScore();
+            
+                    if(sm == Food.class)
+                    {
+                        score.update(10);
+                    }
+
+            
+                
+      }
 }
     
