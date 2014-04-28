@@ -2,22 +2,19 @@ import greenfoot.*;  // imports Actor, World, Greenfoot, GreenfootImage
 
 import java.util.Random;
 
-/**
- * A world where Heros live.
- * 
- * @author Michael Kolling
- * @version 1.0.1
- */
 public class HeroWorld extends World
 {
     /**
      * Create a new world with 8x8 cells and
      * with a cell size of 60x60 pixels
      */
+    private ScoreKeeper currentScore;
     public HeroWorld() 
     {
         super(12, 12, 60);        
         setBackground("cell.jpg");
+        currentScore = new ScoreKeeper();
+        addObject(currentScore,0,0);
     }
 
     /**
@@ -25,12 +22,13 @@ public class HeroWorld extends World
      */    
     public void populate()
     {
-        Hero w1 = new Hero();
+        Hero w1;
+        w1 = Hero.getInstance();
         addObject(w1, 3, 3);
-        
-        Hero w2 = new Hero();
-        addObject(w2, 1, 7);
-
+       
+       // Hero w1 = new Hero();
+        //addObject(w1, 3, 3);
+       
         Wall l1 = new Wall();
         addObject(l1, 5, 3);
 
@@ -48,6 +46,18 @@ public class HeroWorld extends World
         
         Wall l6 = new Wall();
         addObject(l6, 4, 7);
+        
+        Wall l7 = new Wall();
+        addObject(l7, 8, 8);
+        
+       // Monster m1 = new Monster();
+        //addObject(m1,6,6);
+        
+        Food f1 = new Food();
+                addObject(f1,6,6);
+        Food f2 =new Food();
+                addObject(f2,5,7);
+        
     }
     
     /**
@@ -62,5 +72,9 @@ public class HeroWorld extends World
             int y = Greenfoot.getRandomNumber(getHeight());
             addObject(Wall, x, y);
         }
+    }
+    public ScoreKeeper getScore()
+    {
+            return currentScore;
     }
 }

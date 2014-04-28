@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=text
+comment0.target=ScoreKeeper(java.lang.String)
+comment1.params=
+comment1.target=ScoreKeeper()
+comment2.params=count
+comment2.target=void\ update(int)
+comment3.params=count
+comment3.target=void\ bumpCount(int)
+numComments=4

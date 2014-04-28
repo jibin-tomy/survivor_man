@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=text
+comment0.target=HighScoreKeeper(java.lang.String)
+comment1.params=count
+comment1.target=void\ update(int)
+comment2.params=highscore
+comment2.target=void\ highCount(int)
+numComments=3
