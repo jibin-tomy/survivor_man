@@ -3,19 +3,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
 import java.util.List;
 import java.util.ArrayList;
 
-/**
- * Hero. A Hero moves forward until it can't do so anymore, at
- * which point it turns left. If a Hero finds a Wall, it eats it.
- * 
- * @author Michael Kolling
- * @version 1.0.1
- */
 public abstract class Moveable extends Actor
 {
-    protected static final int EAST = 0;
-    protected static final int WEST = 1;
-    protected static final int NORTH = 2;
-    protected static final int SOUTH = 3;
+    public static final int EAST = 0;
+    public static final int WEST = 1;
+    public static final int NORTH = 2;
+    public static final int SOUTH = 3;
 
     private int direction;
     private int life;
