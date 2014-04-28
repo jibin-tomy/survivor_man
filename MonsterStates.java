@@ -1,0 +1,1 @@
+public enum MonsterStates{HERO_FOUND, HERO_NOT_FOUND};
