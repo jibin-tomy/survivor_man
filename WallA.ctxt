@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=maze
+comment0.target=WallA(Maze)
+comment1.params=
+comment1.target=void\ buildMaze()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ WallA\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+numComments=2
