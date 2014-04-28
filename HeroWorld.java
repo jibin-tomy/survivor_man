@@ -2,12 +2,6 @@ import greenfoot.*;  // imports Actor, World, Greenfoot, GreenfootImage
 
 import java.util.Random;
 
-/**
- * A world where Heros live.
- * 
- * @author Michael Kolling
- * @version 1.0.1
- */
 public class HeroWorld extends World
 {
     /**
@@ -27,10 +21,7 @@ public class HeroWorld extends World
     {
         Hero w1 = new Hero();
         addObject(w1, 3, 3);
-        
-        Hero w2 = new Hero();
-        addObject(w2, 1, 7);
-
+       
         Wall l1 = new Wall();
         addObject(l1, 5, 3);
 
@@ -48,6 +39,13 @@ public class HeroWorld extends World
         
         Wall l6 = new Wall();
         addObject(l6, 4, 7);
+        
+        Wall l7 = new Wall();
+        addObject(l7, 8, 8);
+        
+        Monster m1 = new Monster();
+        addObject(m1,6,6);
+        
     }
     
     /**
