@@ -19,7 +19,7 @@ public class Maze extends World
 
         super(55, 30, 20);        
         setBackground("cell.jpg");
-        S=new WallA(this);
+        S=new WallB(this);
         
     }
     

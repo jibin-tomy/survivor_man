@@ -22,10 +22,31 @@ public class WallB extends Strategy
     
     public void buildMaze()
     {
-        for (int y = 4/2+10; y<24*5; y+=5) {
-            for (int x = 4/2; x<19*5; x+=5) {
+     
+     
+    int i=2;
+    for (int k=3; k<50; k+=10){
+        for(int z=1;z<5;z++){
+        for (int m=i;m<i+4;m++){
+            maze.add(k,m);
+        }
+        i=i+7;
+    }
+    i=2;
+    }
+    
+          int l=7;
+        for (int y=3;y<28;y+=4){
+            for (int z=1; z<7; z++)
+            {
+            
+            for (int x=l;x<l+3;x+=1){
                 maze.add(x,y);
             }
+            l=l+10;
         }
+        l=7;
+    } 
+    
     }
 }
