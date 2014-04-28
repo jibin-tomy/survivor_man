@@ -57,6 +57,11 @@ public class HeroWorld extends World
                 addObject(f1,6,6);
         Food f2 =new Food();
                 addObject(f2,5,7);
+        Apple a1 =new Apple();
+                addObject(a1,4,8);
+        Banana b1 =new Banana();
+                addObject(b1,3,9);
+        
         
     }
     

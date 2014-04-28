@@ -60,6 +60,12 @@ public class Hero extends Moveable
         if(isOn(Food.class))
         {
             acquire(Food.class);
+        }else if(isOn(Apple.class))
+        {
+            acquire(Apple.class);
+        }else if(isOn(Banana.class))
+        {
+            acquire(Banana.class);
         }
     }
     
@@ -87,6 +93,12 @@ public class Hero extends Moveable
                     if(sm == Food.class)
                     {
                         score.update(10);
+                    }else if(sm == Apple.class)
+                    {
+                        score.update(20);
+                    }else if(sm == Banana.class)
+                    {
+                        score.update(30);
                     }
 
             
