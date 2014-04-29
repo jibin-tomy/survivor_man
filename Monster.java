@@ -24,7 +24,7 @@ public class Monster extends Moveable
     public Monster()
     {
         setDirection(Moveable.EAST);
-        setImage("images/monster.png");
+        setImage("images/ant3.png");
         heroNotFoundState = new HeroNotFoundState(this);
         heroFoundState = new HeroFoundState(this);
         state = heroNotFoundState;

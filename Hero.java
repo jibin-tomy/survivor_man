@@ -71,7 +71,7 @@ public class Hero extends Moveable
     @Override
     public void die()
     {
-        //TODO
+       getWorld().removeObject(this); 
     }
      public void acquire(Class sm)
      {
@@ -81,7 +81,7 @@ public class Hero extends Moveable
                    
                     getWorld().removeObject(actor);
             }
-             HeroWorld hw = (HeroWorld) getWorld();    
+             Maze hw = (Maze) getWorld();    
                     ScoreKeeper score = hw.getScore();
             
                     if(sm == Food.class)

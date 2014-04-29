@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=monster
+comment0.target=AbstractMonsterState(Monster)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ AbstractMonsterState\r\n
+numComments=1

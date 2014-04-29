@@ -8,4 +8,6 @@ comment2.params=x\ y
 comment2.target=void\ add(int,\ int)
 comment3.params=S
 comment3.target=void\ changeStrategy(Strategy)
-numComments=4
+comment4.params=
+comment4.target=ScoreKeeper\ getScore()
+numComments=5

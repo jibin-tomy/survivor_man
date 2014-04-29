@@ -20,6 +20,7 @@ public class ScoreKeeper extends Actor implements Score
         {
             totalcount += count;
             setImage(new GreenfootImage("" + totalcount, 10, Color.WHITE, Color.BLACK));
+           
         }
 }
  
