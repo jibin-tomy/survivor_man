@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Hero()
+comment0.params=type
+comment0.target=HeroProd(HeroType)
 comment1.params=
-comment1.target=Hero\ getInstance()
+comment1.target=void\ construct()
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\n\ Do\ whatever\ the\ Hero\ likes\ to\ to\ just\ now.\n

@@ -1,38 +1,26 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
-
-import java.util.List;
-import java.util.ArrayList;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Hero. A Hero moves forward until it can't do so anymore, at
- * which point it turns left. If a Hero finds a Wall, it eats it.
+ * Write a description of class HeroProd here.
  * 
- * @author Michael Kolling
- * @version 1.0.1
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class Hero extends Moveable
+public abstract class HeroProd extends Moveable
 {
-    private static Hero heroinstance;
-    private Hero()
+    public HeroProd(HeroType type)
     {
-                setDirection(Moveable.EAST);
+        this.type = type;
+       // setDirection(Moveable.EAST);
     }
-
-    public static Hero getInstance()
-    {
-    if (heroinstance == null)
-        heroinstance = new Hero();
-    return heroinstance;
-    }
-
+     protected abstract void construct();
+     private HeroType type = null;
+     
     /**
      * Do whatever the Hero likes to to just now.
      */
     public void act()
     {
-        
- 
-   
          if(Greenfoot.isKeyDown("left") )
         {
             setDirection(Moveable.WEST);
@@ -52,6 +40,7 @@ public class Hero extends Moveable
             setDirection(Moveable.SOUTH);
             
         }
+       
         
         if(canMove())
         {
@@ -68,10 +57,10 @@ public class Hero extends Moveable
         Actor actor = getOneIntersectingObject(sm);
         return actor != null;
     }
-    @Override
+    //@Override
     public void die()
     {
-        //TODO
+        // getWorld().removeObject(actor);
     }
      public void acquire(Class sm)
      {
@@ -93,4 +82,3 @@ public class Hero extends Moveable
                 
       }
 }
-    

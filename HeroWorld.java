@@ -1,5 +1,5 @@
 import greenfoot.*;  // imports Actor, World, Greenfoot, GreenfootImage
-
+import javax.swing.JOptionPane; 
 import java.util.Random;
 
 public class HeroWorld extends World
@@ -8,7 +8,14 @@ public class HeroWorld extends World
      * Create a new world with 8x8 cells and
      * with a cell size of 60x60 pixels
      */
+    private String state;
     private ScoreKeeper currentScore;
+    public void setstate(String state)
+    {
+        System.out.println("paused");
+        this.state = state;
+    }
+    
     public HeroWorld() 
     {
         super(12, 12, 60);        
@@ -22,13 +29,28 @@ public class HeroWorld extends World
      */    
     public void populate()
     {
-        Hero w1;
-        w1 = Hero.getInstance();
-        addObject(w1, 3, 3);
+       // Hero w1;
+        //w1 = new Hero();
+        //addObject(w1, 3, 3);
        
        // Hero w1 = new Hero();
         //addObject(w1, 3, 3);
-       
+
+       //addObject(Hero.herotype(HeroType.BOY),3,3);
+        //addObject(w1, 3, 3);
+        
+        String input = JOptionPane.showInputDialog("Please enter BOY or GIRL"); 
+        Hero w1 = new Hero();
+        if(input.equals("BOY"))
+        {
+        HeroProd h1 = w1.herotype(HeroType.BOY);
+        addObject(h1, 3, 3);
+        }
+        else if(input.equals("GIRL"))
+       {
+       HeroProd h1 = w1.herotype(HeroType.GIRL); 
+       addObject(h1, 3, 3);
+       }
         Wall l1 = new Wall();
         addObject(l1, 5, 3);
 
@@ -77,4 +99,5 @@ public class HeroWorld extends World
     {
             return currentScore;
     }
+   
 }

@@ -12,6 +12,7 @@ public class Monster extends Moveable
     * Act - do whatever the Monster wants to do. This method is called whenever
     * the 'Act' or 'Run' button gets pressed in the environment.
     */
+    
     public void act() 
     {
         state.move();
@@ -54,7 +55,9 @@ public class Monster extends Moveable
     {
         if(onHero())
         {
-            Hero hero = (Hero) getWorld().getObjects(Hero.class).get(0);
+           //Hero w1 = new Hero();
+           //HeroProd h1 = w1.herotype(HeroType.BOY);
+            HeroProd hero = (HeroProd) getWorld().getObjects(HeroProd.class).get(0);
             hero.setLife(hero.getLife() - DAMAGE);
         }
     }

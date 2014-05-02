@@ -1,12 +1,14 @@
 #BlueJ class context
-comment0.params=
-comment0.target=HeroWorld()
+comment0.params=state
+comment0.target=void\ setstate(java.lang.String)
 comment1.params=
-comment1.target=void\ populate()
-comment1.text=\n\ Populate\ the\ world\ with\ a\ fixed\ scenario\ of\ Heros\ and\ leaves.\n
-comment2.params=howMany
-comment2.target=void\ randomLeaves(int)
-comment2.text=\n\ Place\ a\ number\ of\ leaves\ into\ the\ world\ at\ random\ places.\n\ The\ number\ of\ leaves\ can\ be\ specified.\n
-comment3.params=
-comment3.target=ScoreKeeper\ getScore()
-numComments=4
+comment1.target=HeroWorld()
+comment2.params=
+comment2.target=void\ populate()
+comment2.text=\n\ Populate\ the\ world\ with\ a\ fixed\ scenario\ of\ Heros\ and\ leaves.\n
+comment3.params=howMany
+comment3.target=void\ randomLeaves(int)
+comment3.text=\n\ Place\ a\ number\ of\ leaves\ into\ the\ world\ at\ random\ places.\n\ The\ number\ of\ leaves\ can\ be\ specified.\n
+comment4.params=
+comment4.target=ScoreKeeper\ getScore()
+numComments=5
