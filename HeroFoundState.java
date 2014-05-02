@@ -21,7 +21,7 @@ public class HeroFoundState extends AbstractMonsterState
         else
         {
  
-            Hero hero = Hero.getInstance();
+            HeroProd hero = Hero.herotype(HeroType.BOY);
             int heroX = hero.getX();
             int heroY = hero.getY();
             int myX = monster.getX();
