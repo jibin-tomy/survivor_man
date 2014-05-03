@@ -10,20 +10,24 @@ import java.util.ArrayList;
  * @author Michael Kolling
  * @version 1.0.1
  */
-public class Hero extends Moveable
+public abstract class Hero extends Moveable
 {
     private static Hero heroinstance;
-    private Hero()
+    protected Hero()
     {
                 setDirection(Moveable.EAST);
+                setImage(getHeroImage());
+                heroinstance = this;
     }
 
     public static Hero getInstance()
-    {
+    {/*
     if (heroinstance == null)
-        heroinstance = new Hero();
+        heroinstance = new Hero();*/
     return heroinstance;
     }
+    
+    
 
     /**
      * Do whatever the Hero likes to to just now.
@@ -57,9 +61,15 @@ public class Hero extends Moveable
         {
               move();      
         }
-        if(isOn(Food.class))
+        if(isOn(Grape.class))
         {
-            acquire(Food.class);
+            acquire(Grape.class);
+        }else if(isOn(Banana.class))
+        {
+            acquire(Banana.class);
+        }else if(isOn(Cherrie.class))
+        {
+            acquire(Cherrie.class);
         }
     }
     
@@ -71,7 +81,9 @@ public class Hero extends Moveable
     @Override
     public void die()
     {
+        MenuWorld mn = new MenuWorld();
        getWorld().removeObject(this); 
+       Greenfoot.setWorld(mn);
     }
      public void acquire(Class sm)
      {
@@ -84,13 +96,21 @@ public class Hero extends Moveable
              Maze hw = (Maze) getWorld();    
                     ScoreKeeper score = hw.getScore();
             
-                    if(sm == Food.class)
+                    if(sm == Grape.class)
                     {
                         score.update(10);
+                    }else  if(sm == Banana.class)
+                    {
+                        score.update(20);
+                    }else  if(sm == Cherrie.class)
+                    {
+                        score.update(30);
                     }
 
             
                 
       }
+      
+     abstract public GreenfootImage getHeroImage();
 }
     

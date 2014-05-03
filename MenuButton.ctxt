@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=cmd
+comment0.target=MenuButton(MenuCommand)
+comment0.text=\r\n\ \ \ \ MenuWorld\ menuWorld;\r\n\ \ \ \ HeroWorld\ heroWorld;\r\nprivate\ MessageBox\ viewHighScoreLabel;\ \ \ \ \r\nprivate\ MessageBox\ viewGamestart1;\ \ \ \ \r\nprivate\ ReceiverState\ receiverState;\r\nprivate\ CommandGameStart\ commandGameStart;\r\nprivate\ CommandHighScore\ highScore;\r\n
+comment1.params=
+comment1.target=void\ act()
+numComments=2

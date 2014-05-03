@@ -12,4 +12,6 @@ comment4.params=
 comment4.target=void\ die()
 comment5.params=sm
 comment5.target=void\ acquire(java.lang.Class)
-numComments=6
+comment6.params=
+comment6.target=greenfoot.GreenfootImage\ getHeroImage()
+numComments=7

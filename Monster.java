@@ -77,5 +77,5 @@ public class Monster extends Moveable
     private IMonsterState heroFoundState;
     private IMonsterState heroNotFoundState;
     private static int DAMAGE = 1;
-    private static int RADIUS = 2;
+    private static int RADIUS = 6;
 }

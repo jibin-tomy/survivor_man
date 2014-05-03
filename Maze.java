@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import javax.swing.JOptionPane;
 /**
  * Write a description of class Maze here.
  * 
@@ -10,6 +10,7 @@ public class Maze extends World
 {
     private Strategy S;
      private ScoreKeeper currentScore;
+     private static String gender;
     /**
      * Constructor for objects of class Maze.
      * 
@@ -22,24 +23,48 @@ public class Maze extends World
         setBackground("space1.jpg");
         S=new WallB(this);
         currentScore = new ScoreKeeper();
-        addObject(currentScore,0,0);
+        addObject(currentScore,1,0);
+        
     }
+    
+    public static void setHero(String input)
+    {
+        gender=input;
+    }
+    
     
     public void populate()
     {
         this.S.buildMaze();
         
-        for(int i=0;i<13;i++){
+        LevelChange l=new LevelChange();
+        addObject(l,2,0);
+        
+        for(int i=0;i<1;i++){
         int x = Greenfoot.getRandomNumber(getWidth());
             int y = Greenfoot.getRandomNumber(getHeight());
-        
-        Food f1 = new Food();
-                addObject(f1,x,y);
-        Food f2 =new Food();
+       
+        Food f2 =new Banana();
                 addObject(f2,x,y);
             }
             
-         for(int i=0;i<10;i++){
+          for(int i=0;i<1;i++){
+        int x = Greenfoot.getRandomNumber(getWidth());
+            int y = Greenfoot.getRandomNumber(getHeight());
+       
+        Food f1 =new Grape();
+                addObject(f1,x,y);
+            }
+            
+            for(int i=0;i<1;i++){
+        int x = Greenfoot.getRandomNumber(getWidth());
+            int y = Greenfoot.getRandomNumber(getHeight());
+       
+        Food f3 =new Cherrie();
+                addObject(f3,x,y);
+            }
+            
+         for(int i=0;i<1;i++){
         int x = Greenfoot.getRandomNumber(getWidth());
             int y = Greenfoot.getRandomNumber(getHeight());
         
@@ -47,8 +72,20 @@ public class Maze extends World
         addObject(m,x,y);
         
     }
-       addObject(Hero.getInstance(),25,14);
-       
+    
+    BoyHero h1 = new BoyHero();
+    GirlHero g1 = new GirlHero();
+    if(gender.equals("BOY"))
+    {
+       h1.getHeroImage();
+       addObject(h1,25,15);  
+    }
+       else if(gender.equals("GIRL"))
+       {
+       g1.getHeroImage();
+       addObject(g1,25,15);  
+    }
+     
     }
     
     void add(int x, int y)

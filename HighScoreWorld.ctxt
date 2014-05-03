@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=
+comment0.target=HighScoreWorld()
+comment1.params=
+comment1.target=void\ prepare()
+comment1.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\ That\ is\:\ create\ the\ initial\r\nobjects\ and\ add\ them\ to\ the\ world.*
+numComments=2
